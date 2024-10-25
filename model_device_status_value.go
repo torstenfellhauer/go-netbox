@@ -15,7 +15,7 @@ import (
 	"fmt"
 )
 
-// DeviceStatusValue * `offline` - Offline * `active` - Active * `planned` - Planned * `staged` - Staged * `failed` - Failed * `inventory` - Inventory * `decommissioning` - Decommissioning
+// DeviceStatusValue * `offline` - Offline * `active` - Active * `planned` - Planned * `staged` - Staged * `failed` - Failed * `inventory` - Inventory * `decommissioning` - Decommissioning * `maintenance` - Maintenance
 type DeviceStatusValue string
 
 // List of Device_status_value
@@ -27,6 +27,7 @@ const (
 	DEVICESTATUSVALUE_FAILED          DeviceStatusValue = "failed"
 	DEVICESTATUSVALUE_INVENTORY       DeviceStatusValue = "inventory"
 	DEVICESTATUSVALUE_DECOMMISSIONING DeviceStatusValue = "decommissioning"
+	DEVICESTATUSVALUE_MAINTENANCE DeviceStatusValue = "maintenance"
 )
 
 // All allowed values of DeviceStatusValue enum
@@ -38,6 +39,7 @@ var AllowedDeviceStatusValueEnumValues = []DeviceStatusValue{
 	"failed",
 	"inventory",
 	"decommissioning",
+	"maintenance",
 }
 
 func (v *DeviceStatusValue) UnmarshalJSON(src []byte) error {

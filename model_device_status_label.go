@@ -27,6 +27,7 @@ const (
 	DEVICESTATUSLABEL_FAILED          DeviceStatusLabel = "Failed"
 	DEVICESTATUSLABEL_INVENTORY       DeviceStatusLabel = "Inventory"
 	DEVICESTATUSLABEL_DECOMMISSIONING DeviceStatusLabel = "Decommissioning"
+	DEVICESTATUSLABEL_MAINTENANCE DeviceStatusLabel = "Maintenance"
 )
 
 // All allowed values of DeviceStatusLabel enum
@@ -38,6 +39,7 @@ var AllowedDeviceStatusLabelEnumValues = []DeviceStatusLabel{
 	"Failed",
 	"Inventory",
 	"Decommissioning",
+	"Maintenance",
 }
 
 func (v *DeviceStatusLabel) UnmarshalJSON(src []byte) error {
